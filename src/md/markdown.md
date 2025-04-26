@@ -20,11 +20,15 @@ Markdown:
 ![설명](이미지URL)
 
 4.Text Style(글자 스타일)
-|      |  HTML | Markdown |
-|------|-------|----------|
-| 굵게  | <strong>, <b> | **굵게**, __굵게__ |
-| 기울임 | <em>, <i>     | *기울임*, _기울임_  |
-| 취소선 | <del>         | ~~취소선~~        |
+4-1.굵게
+HTML:<strong>, <b>
+Markdown:**굵게**, __굵게__
+4-2.기울임
+HTML:<em>, <i>
+Markdown:*기울임*, _기울임_
+4-3.취소선
+HTML:<del>
+Markdown:~~취소선~~
 
 5.List(목록)
 5-1.Unoredered List(순서 없는 목록)
