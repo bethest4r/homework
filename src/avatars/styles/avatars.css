@@ -1,1 +1,14 @@
 /* 여기에 스타일을 구현해 주세요 */
+.box {
+  background-color: #fff;
+  padding: 100px;
+}
+
+.box_avatars {
+  display: inline-block;
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}
