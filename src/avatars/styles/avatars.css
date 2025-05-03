@@ -1,9 +1,8 @@
-/* 여기에 스타일을 구현해 주세요 */
 .content {
-  margin: 0;
+  margin: 0 auto;
   background-color: #fff;
-  width: 596px;
-  height: 395px;
+  width: 90%;
+  max-width: 596px;
 }
 .box {
   background-color: #fff;
