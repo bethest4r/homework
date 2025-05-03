@@ -1,14 +1,46 @@
 /* 여기에 스타일을 구현해 주세요 */
+.content {
+  margin: 0;
+  background-color: #fff;
+  width: 596px;
+  height: 395px;
+}
 .box {
   background-color: #fff;
   padding: 100px;
+  text-align: center;
+  font-size: 0;
+  margin: 0 auto;
 }
 
 .box_avatars {
   display: inline-block;
-  img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-  }
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 10px;
+}
+
+.box_avatars img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.status {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.online {
+  background-color: #4cfe88;
+}
+.offline {
+  background-color: #dbdbdb;
 }
