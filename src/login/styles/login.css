@@ -1,1 +1,179 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  --font-size: 1rem;
+  --font-color: #121212;
+  --color-focus: #24388d;
+
+  --input-size: 0.875rem;
+  --input-height: 2.8125rem;
+  --input-border: #dadada;
+  --input-bg: #fff;
+  --input-border-focus: #03cf5d;
+  --input-bg-focus: #e9f0fd;
+
+  --check-size: 1.5rem;
+  --check-gap: 0.3125rem;
+  --check-off: url('../../assets/svg/unchecked.svg');
+  --check-on: url('../../assets/svg/checked.svg');
+
+  --btn-size: 1rem;
+  --btn-height: 2.8125rem;
+  --btn-color: #fff;
+  --btn-bg: #03cf5d;
+  --btn-margin-top: 1.25rem;
+
+  --box-margin-top: 0.625rem;
+  --ip-font-size: 1rem;
+  --ip-font-color: #121212;
+
+  --padding-side: 1.25rem;
+  --max-width: 31.25rem;
+}
+
+body {
+  font-size: var(--font-size);
+  color: var(--font-color);
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.login-form {
+  width: 100%;
+  padding: 0 var(--padding-side);
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.naver-logo {
+  display: block;
+  margin: 2rem auto 1rem;
+  width: 230px;
+}
+
+.form-input {
+  margin-bottom: 1rem;
+}
+
+.form-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: var(--input-size);
+}
+
+.form-input input {
+  width: 100%;
+  font-size: var(--input-size);
+  height: var(--input-height);
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  transition: all 0.2s;
+}
+
+.form-input input:focus {
+  border-color: var(--input-border-focus);
+  background-color: var(--input-bg-focus);
+}
+
+input:invalid:focus {
+  border-color: red;
+}
+
+.form-button {
+  margin-top: var(--btn-margin-top);
+}
+
+.login-button {
+  width: 100%;
+  height: var(--btn-height);
+  font-size: var(--btn-size);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  cursor: pointer;
+}
+
+.form-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--box-margin-top);
+}
+
+input[type='checkbox'] + .checkbox-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: var(--check-size);
+  height: var(--check-size);
+  background-image: var(--check-off);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type='checkbox']:checked + .checkbox-label::before {
+  background-image: var(--check-on);
+}
+
+.checkbox-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-left: calc(var(--check-size) + var(--check-gap));
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.ip-toggle {
+  font-size: var(--ip-font-size);
+  color: var(--ip-font-color);
+}
+
+.ip-toggle:focus {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.ip-off {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #999;
+}
+
+@media (min-width: 48rem) {
+  .ip-off {
+    display: inline;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .ip-off {
+    display: none;
+  }
+}
