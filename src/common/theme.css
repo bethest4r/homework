@@ -1,0 +1,24 @@
+@theme {
+  /* 색상을 초기화 후 원하는 색상만 등록 */
+  --color-*: initial;
+  --color-likelion: oklch(0.72 0.11 178);
+  /* SUIT 글꼴 추가 */
+  --font-suit: 'SUIT Variable', sans-serif;
+  /* 중단점(sm)을 재정의 */
+  --breakpoint-sm: 30rem;
+  /* text-sm :14px */
+  --text-sm: 0.875rem;
+
+  --animate-fade-in-scale: fade-in-scale 0.3s ease-out infinite;
+
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
